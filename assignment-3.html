@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Assignment 2</title>
+        <title>Assignment 3</title>
         <link href="assignment-3-stylesheet.css" type="text/css" rel="stylesheet"/>
     </head>
     <body>
@@ -72,9 +72,9 @@
 		<div class="wrapper-bottom">
 			<div class="content">
 				<div class="contentHeading"> Trees, Trees, And More Trees </div>
-				<img src="assignment-3-photos/tree.jpg" class="imagebox" title="Tree" />
+				<img src="assignment-3-photos/tree.jpg" class="imagebox" title="Tree" onclick="javascript:changeImage()" id="image">
 				<div>
-						<p>
+						<p id="txt" ondblclick="javascript:changeTextArea()">
 							
 							The greater portion of the land area of New York State is better adapted to growing trees than to any other use, making forestry a vital part of the State's agricultural programs.  Work in forestry appeals to old and young alike because of its outdoor nature and the possibility of combining activities in nature study, conservation, camping, and woodcraft.
 
@@ -83,19 +83,85 @@
 
 							With this bulletin as a guide, it should be possible for current and future landowners to become familiar with most forest trees in their neighborhood.   As future woodland owners, this basic knowledge of the trees of the forest will contribute to better management of our State's private forests.	
 						</p>
+						<form id="frm" style="display:none;">
+							<textarea id="edittext"></textarea>
+							<input type="hidden" value="submit" id="sub" onclick="javascript:fixTextArea()">
+						</form>
 				</div>
 				<div>
-						<H2>Top 5 places for tree enthusiasts</H2>
-						<ul>
-							<li> <a href="https://www.nps.gov/redw/index.htm"> Redwoods </a> </li>
-							<li> <a href="https://www.parks.ca.gov/?page_id=551"> Big Tree </a> </li>
-							<li> <a href="https://www.nps.gov/jotr/index.htm"> Joshua Tree </a> </li>
-							<li> <a href="https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-851-advanced-data-structures-spring-2012/"> Data Structures </a> </li>
-							<li> <a href="https://www.nationalgeographic.com/travel/destinations/asia/yemen/see-the-otherworldly-tree-of-life-socotra-dragon-blood/"> Socotra </a> </li>
-						</ul>
+						<H2>Tree Tiles</H2>
+						<div id="canvas">
+							<div class="tile">
+								<div class="tile-button"> X</div>
+								<img src="assignment-3-photos/tile-images/tree-1.jpg" class="listimage"/>
+								<div class="tile-title">Tile 1</div>
+							</div>
+							<div class="tile">
+								<div class="tile-button"> X</div>
+								<img src="assignment-3-photos/tile-images/tree-2.jpg" class="listimage"/>
+								<div class="tile-title">Tile 2</div>
+							</div>
+							<div class="tile">
+								<div class="tile-button"> X</div>
+								<img src="assignment-3-photos/tile-images/tree-3.jpg" class="listimage"/>
+								<div class="tile-title">Tile 3</div>
+							</div>
+							<div class="tile">
+								<div class="tile-button"> X</div>
+								<img src="assignment-3-photos/tile-images/tree-4.jpg" class="listimage"/>
+								<div class="tile-title">Tile 4</div>
+							</div>
+							<div class="tile">
+								<div class="tile-button"> X</div>
+								<img src="assignment-3-photos/tile-images/tree-5.jpg" class="listimage"/>
+								<div class="tile-title">Tile 5</div>
+							</div>
+							<div class="tile">
+								<div class="tile-button"> X</div>
+								<img src="assignment-3-photos/tile-images/tree-6.gif" class="listimage"/>
+								<div class="tile-title">Tile 6</div>
+							</div>
+							<div class="tile">
+								<div class="tile-button"> X</div>
+								<img src="assignment-3-photos/tile-images/tree-7.jpg" class="listimage"/>
+								<div class="tile-title">Tile 7</div>
+							</div>
+							<div class="tile">
+								<div class="tile-button"> X</div>
+								<img src="assignment-3-photos/tile-images/tree-8.jpg" class="listimage"/>
+								<div class="tile-title">Tile 8</div>
+							</div>
+							<div class="tile">
+								<div class="tile-button"> X</div>
+								<img src="assignment-3-photos/tile-images/tree-9.jpg" class="listimage"/>
+								<div class="tile-title">Tile 9</div>
+							</div>
+							<div class="tile">
+								<div class="tile-button"> X</div>
+								<img src="assignment-3-photos/tile-images/tree-10.jpg" class="listimage"/>
+								<div class="tile-title">Tile 10</div>
+							</div>
+							<div class="tile">
+								<div class="tile-button"> X</div>
+								<img src="assignment-3-photos/tile-images/tree-11.jpg" class="listimage"/>
+								<div class="tile-title">Tile 11</div>
+							</div>
+							<div class="tile">
+								<div class="tile-button"> X</div>
+								<img src="assignment-3-photos/tile-images/tree-12.jpg" class="listimage"/>
+								<div class="tile-title">Tile 12</div>
+							</div>
+						</div>
+						<div class="button" id="reset">
+							Reset
+						</div>
+						<div class="button" id="clear">
+							Clear
+						</div>
 				</div>
 			</div>
 			<footer>Made by Brenden Lowe and Blake Cecil for Assignment 2</footer>
 		</div>
-    </body>
+	</body>
+	<script src="assignment-3.js"></script>
 </html>
